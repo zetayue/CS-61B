@@ -1,7 +1,7 @@
 public class IntList {
 
-    int first;
-    IntList rest;
+    public int first;
+    public IntList rest;
     public IntList(int f, IntList r) {
         first = f;
         rest = r;
@@ -33,5 +33,10 @@ public class IntList {
         test = new IntList(0, test);
         System.out.println(test.get(2));
         System.out.println(test.size());
+
+        System.out.println(test.rest.first);
+        System.out.println(ExtraIntListPractice.incrList(test, 3).rest.rest.first);
+        System.out.println(ExtraIntListPractice.dincrList(test,3).rest.rest.first);
+
     }
 }
